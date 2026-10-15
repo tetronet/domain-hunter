@@ -31,9 +31,16 @@ namespace ShortDomainHunter
                     IPAddress addr = Dns.GetHostAddresses(ToLetters(i) + textBox1.Text)[0];
                     Found.TryAdd(ToLetters(i) + textBox1.Text, addr);
                 }
-                catch (SocketException)
+                catch (SocketException ex)
                 {
-                    Found.TryAdd(ToLetters(i) + textBox1.Text, IPAddress.Any);
+                    if (ex.SocketErrorCode == SocketError.NoData || ex.SocketErrorCode == SocketError.HostNotFound)
+                    {
+                        Found.TryAdd(ToLetters(i) + textBox1.Text, null);
+                    }
+                    else
+                    {
+                        Found.TryAdd(ToLetters(i) + textBox1.Text, IPAddress.Any);
+                    }
                 }
                 catch (IndexOutOfRangeException)
                 {
