@@ -11,6 +11,6 @@ You see, there's only:
 - 17576 triple-letter domain
 - 456976 quad-letter domain
 - and 11881376 penta-letter domain
-The Internet has ~8 billion users, which means if you claim a 4-letter domain, you're going to attend in a group of only 0.000057% of the Internet. Isn't this great?
+The Internet has ~8 billion users, which means if you claim a 4-letter domain, you're going to attend in a group of only 0.0057% of the Internet. Isn't this great?
 ### Big thanks
 To people who reached out to my other repos, I'm the official Tetronet (aka Copybook Internet) developer, the guy who built most of the base protocols for it, so you should totally check it out :)
